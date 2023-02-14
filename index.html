@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kashi Arain">
+    <meta name="Keywords" content="Website, web development, app development, seo, search engine optimization, web security, spa, ssr, csr, pwa, progressive web apps">
+    <meta name="description" content="Kashi Intelli - is a Dvelopment Company">
+    <link rel="icon" href="./k.ico" type="image/x-icon">
+
+    <title>Kashi Intelli - Home Page</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar {
+            display: none
+        }
+
+        header img {
+            animation: heroAnim 3s infinite ease-in-out
+        }
+
+        header .gtxl {
+            animation: heroAnimxl 3s infinite ease-in-out
+        }
+
+        .services {
+            background: linear-gradient(123deg, #FFFFFF 0%, #00B2FF 100%), linear-gradient(236deg, #BAFF99 0%, #005E64 100%), linear-gradient(180deg, #FFFFFF 0%, #002A5A 100%), linear-gradient(225deg, #0094FF 20%, #BFF4ED 45%, #280F34 45%, #280F34 70%, #FF004E 70%, #E41655 85%, #B30753 85%, #B30753 100%), linear-gradient(135deg, #0E0220 15%, #0E0220 35%, #E40475 35%, #E40475 60%, #48E0E4 60%, #48E0E4 68%, #D7FBF6 68%, #D7FBF6 100%);
+            background-blend-mode: overlay, overlay, overlay, darken, normal;
+        }
+
+        .card {
+            background: radial-gradient(100% 225% at 100% 0%, #FAFF00 0%, #000000 100%), linear-gradient(235deg, #DB00FF 0%, #000000 100%), linear-gradient(45deg, #241E92 0%, #241E92 40%, #5432D3 40%, #5432D3 50%, #7B6CF6 50%, #7B6CF6 70%, #E5A5FF 70%, #E5A5FF 100%), linear-gradient(180deg, #01024E 0%, #01024E 43%, #543864 43%, #543864 62%, #8B4367 62%, #8B4367 80%, #FF6464 80%, #FF6464 100%);
+            background-blend-mode: overlay, hard-light, overlay, normal;
+        }
+
+        .ctitle {
+            background: linear-gradient(129.96deg, #FF2F2F 10.43%, #000460 92.78%), radial-gradient(100% 246.94% at 100% 0%, #FFFFFF 0%, #020063 100%), linear-gradient(121.18deg, #1400FF 0.45%, #3A0000 100%), linear-gradient(154.03deg, #FF002E 0%, #FF003D 74.04%), linear-gradient(341.1deg, #B25BBA 7.52%, #1700A7 77.98%), linear-gradient(222.34deg, #0047FF 12.99%, #FF0000 87.21%), linear-gradient(150.76deg, #B7D500 15.35%, #2200AA 89.57%);
+            background-blend-mode: overlay, color-burn, screen, overlay, difference, difference, normal;
+        }
+        @keyframes heroAnim {
+            0%, 100% { transform: translateY(-15%) }
+            50% { transform: translateY(5%) }
+        }
+
+        @keyframes heroAnimxl {
+            0%, 100% { transform: translateY(0) }
+            50% { transform: translateY(15%) }
+        }
+
+        .btn {
+            height: 4em;
+            transition: 0.1s;
+        }
+
+        #clip {
+            --color: #27c39f;
+            overflow: hidden;
+            border: 5px double var(--color);
+            box-shadow: inset 0px 0px 15px #195480;
+            -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            box-shadow: inset 0px 0px 32px #27c39f;
+        }
+
+        .corner {
+            width: 4em;
+            height: 4em;
+            box-shadow: inset 1px 1px 8px #2781c3;
+            transition: 0.2s;
+            transform: scale(1.25) rotate(45deg);
+        }
+
+        #rightTop {
+            top: -1.98em;
+            left: 91%;
+            background-color: #27c39f;
+            box-shadow: 0 0 2px #27c39f;
+        }
+
+        #leftTop {
+            top: -1.96em;
+            left: -3.0em;
+            background-color: #27c39f;
+            box-shadow: 0 0 2px #27c39f;
+        }
+
+        #leftBottom {
+            top: 2.10em;
+            left: -2.15em;
+            background-color: #27c39f;
+            box-shadow: 0 0 2px #27c39f;
+        }
+
+        #rightBottom {
+            top: 45%;
+            left: 88%;
+            background-color: #27c39f;
+            box-shadow: 0 0 2px #27c39f;
+        }
+
+        .glow {
+            --glow-color: rgb(217, 176, 255);
+            --glow-spread-color: rgba(191, 123, 255, 0.781);
+            --enhanced-glow-color: rgb(231, 206, 255);
+            --btn-color: rgb(100, 61, 136);
+            border: .25em solid var(--glow-color);
+            color: var(--glow-color);
+            background-color: var(--btn-color);
+            box-shadow: 0 0 1em .25em var(--glow-color),
+                0 0 4em 1em var(--glow-spread-color),
+                inset 0 0 .75em .25em var(--glow-color);
+            text-shadow: 0 0 .5em var(--glow-color);
+            transition: all 0.3s;
+        }
+
+        .glow::after {
+            pointer-events: none;
+            content: "";
+            position: absolute;
+            top: 120%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: var(--glow-spread-color);
+            filter: blur(2em);
+            opacity: .7;
+            transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+        }
+
+        .glow:hover {
+            color: var(--btn-color);
+            background-color: var(--glow-color);
+            box-shadow: 0 0 1em .25em var(--glow-color),
+                0 0 4em 2em var(--glow-spread-color),
+                inset 0 0 .75em .25em var(--glow-color);
+        }
+
+        .glow:active {
+            box-shadow: 0 0 0.6em .25em var(--glow-color),
+                0 0 2.5em 2em var(--glow-spread-color),
+                inset 0 0 .5em .25em var(--glow-color);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 ">
+    <header class="min-h-screen px-2 sm:px-6 lg:px-8 pb-20 pt-6 bg-cover bg-center bg-no-repeat"
+        style="background-image: url(./images/herobg.webp);">
+        <nav
+            class="hidden bg-yellow-400 w-[600px] md:w-[700px] lg:w-[900px] mx-auto p-2 rounded-full sm:flex justify-between items-center mb-4  shadow-lg shadow-yellow-100">
+            <a class="text-white text-xl font-semibold bg-black lg:w-28 text-center py-2 px-4 rounded-full shadow-md shadow-yellow-100"
+                href="/">Home</a>
+            <a class="text-white text-xl font-semibold bg-black lg:w-28 text-center py-2 px-4 rounded-full shadow-md shadow-yellow-100"
+                href="#about" role="button">About</a>
+            <a class="text-white text-xl font-semibold bg-black lg:w-28 text-center py-2 px-4 rounded-full shadow-md shadow-yellow-100"
+                href="#services" role="button">Services</a>
+            <a class="text-white text-xl font-semibold bg-black lg:w-28 text-center py-2 px-4 rounded-full shadow-md shadow-yellow-100"
+                href="#whyus" role="button">Why Us</a>
+            <a class="text-white text-xl font-semibold bg-black lg:w-28 text-center py-2 px-4 rounded-full shadow-md shadow-yellow-100"
+                href="#facts" role="button">Facts</a>
+            <a class="text-white text-xl font-semibold bg-black lg:w-28 text-center py-2 px-4 rounded-full shadow-md shadow-yellow-100"
+                href="#pricing" role="button">Pricing</a>
+        </nav>
+        <section class="container mx-auto h-full items-center grid gap-16 grid-cols-1 lg:grid-cols-2">
+            <div class="py-6">
+                <h1
+                    class="text-5xl sm:text-6xl font-bold w-72 bg-gradient-to-r from-black to-transparent border-l-4 border-white py-7 px-5 mb-10">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-yellow-400 ">
+                        Kashi Intelli
+                    </span>
+                </h1>
+                <h2 class="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-5">Advance Software Development
+                    <span class="text-red-500">&amp;</span> Powerful Digital solutions..</h2>
+                <p class="text-white text-lg sm:text-xl mb-5 xl:mb-16">We Carry More Than Just Good Coding Skills.</p>
+
+                <a href="tel: +923000970989"
+                    class="btn relative flex justify-center items-center w-52 text-xl font-bold text-white text-center">
+                    Contact Us
+
+
+                    <div id="clip" class="absolute top-0 w-full h-full ">
+                        <div id="leftTop" class="corner absolute"></div>
+                        <div id="rightBottom" class="corner absolute"></div>
+                        <div id="rightTop" class="corner absolute"></div>
+                        <div id="leftBottom" class="corner absolute"></div>
+                    </div>
+
+                </a>
+            </div>
+            <figure>
+                <img src="./images/hero.png" alt="" width="100%" height="100%" class="gtxl">
+            </figure>
+        </section>
+    </header>
+    <main>
+        <section class="flex flex-col lg:flex-row gap-6 justify-center items-center py-10 px-2">
+            <figure class="max-w-sm w-full border-l-2 border-red-500 px-5  shadow-xl shadow-slate-50">
+                <div class="w-fit rounded-full p-2 border-2 border-dotted border-yellow-400">
+                    <div class="w-32 h-32 bg-slate-800 rounded-full flex justify-center items-center">
+                        <img src="./images/icons/development-progress.svg" class="w-24 h-24" alt="">
+                    </div>
+                </div>
+                <figcaption class="text-2xl text-yellow-400 font-semibold mt-8 mb-4">Urgent 24/7 Development Services
+                </figcaption>
+            </figure>
+            <figure class="max-w-sm w-full border-l-2 border-red-500 px-5  shadow-xl shadow-slate-50">
+                <div class="w-fit rounded-full p-2 border-2 border-dotted border-yellow-400">
+                    <div class="w-32 h-32 bg-slate-800 rounded-full flex justify-center items-center">
+                        <img src="./images/icons/company.svg" class="w-24 h-24" alt="">
+                    </div>
+                </div>
+                <figcaption class="text-2xl text-yellow-400 font-semibold mt-8 mb-4">Trusted, Experienced & Insured
+                    Company</figcaption>
+            </figure>
+            <figure class="max-w-sm w-full border-l-2 border-red-500 px-5  shadow-xl shadow-slate-50">
+                <div class="w-fit rounded-full p-2 border-2 border-dotted border-yellow-400">
+                    <div class="w-32 h-32 bg-slate-800 rounded-full flex justify-center items-center">
+                        <img src="./images/icons/solution.svg" class="w-24 h-24" alt="">
+                    </div>
+                </div>
+                <figcaption class="text-2xl text-yellow-400 font-semibold mt-8 mb-4">Personalized Solutions For Every
+                    Customer</figcaption>
+            </figure>
+        </section>
+        <section id="about" class="p-4 my-10 mb-20">
+            <div class="max-w-7xl mx-auto space-y-20 flex flex-col lg:flex-row gap-10 lg:gap-4 justify-center ">
+                <figure class="relative  max-w-xl lg:max-w-lg mx-auto">
+                    <img src="./images/development.webp" width="100%" height="100%" alt="development about image"
+                        loading="lazy">
+                    <div
+                        class="w-40 sm:w-48 bg-slate-900 p-1 sm:p-2 absolute left-1/2 bottom-0 translate-x-[-50%] translate-y-1/2 shadow-md shadow-yellow-300">
+                        <img src="./images/devoops.webp" width="100%" height="100%" alt="">
+                    </div>
+                    <div
+                        class="hidden sm:flex rounded-r-xl border-l-4 border-red-600 bg-white  p-4 text-2xl absolute left-0 top-7 justify-between items-center ">
+                        <span class="text-6xl font-bold text-red-700  mr-3">2k</span> Projects Done This Year
+                    </div>
+                </figure>
+
+
+                <div class="space-y-8 max-w-xl mx-auto">
+                    <h1 class="text-2xl font-bold text-yellow-400">Kashi Intelli</h1>
+                    <h2 class="text-3xl font-bold text-gray-200">Kashi Intelli is a Skilled company for doing better Web
+                        & App Development.</h2>
+                    <p class="text-xl font-medium text-gray-400">As a custom development company, we build complex
+                        solutions following your requirements.</p>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="services py-5">
+            <h1
+                class="w-fit mx-auto text-center text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400  to-red-600 p-10">
+                Services
+            </h1>
+            <div class="p-3 flex justify-center gap-5 flex-wrap">
+                <div>
+                    <figure
+                        class="card text-center border-l-2 border-red-500 mx-auto w-[350px] pl-1 shadow-lg shadow-slate-50">
+                        <img src="./images/web_design.webp" alt="">
+                        <figcaption class="ctitle text-white w-full text-3xl font-bold py-6">Web Design</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure
+                        class="card text-center border-l-2 border-red-500 mx-auto w-[350px] pl-1 shadow-lg shadow-slate-50">
+                        <img src="./images/webdev.webp" alt="">
+                        <figcaption class="ctitle text-white w-full text-3xl font-bold py-6">Web Development
+                        </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure
+                        class="card text-center border-l-2 border-red-500 mx-auto w-[350px] pl-1 shadow-lg shadow-slate-50">
+                        <img src="./images/softdev.webp" alt="">
+                        <figcaption class="ctitle text-white w-full text-3xl font-bold py-6">Software Development
+                        </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure
+                        class="card text-center border-l-2 border-red-500 mx-auto w-[350px] pl-1 shadow-lg shadow-slate-50">
+                        <img src="./images/appdev.webp" alt="">
+                        <figcaption class="ctitle text-white w-full text-3xl font-bold py-6">App Design</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure
+                        class="card text-center border-l-2 border-red-500 mx-auto w-[350px] pl-1 shadow-lg shadow-slate-50">
+                        <img src="./images/seo.webp" alt="">
+                        <figcaption class="ctitle text-white w-full text-3xl font-bold py-6">SEO</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure
+                        class="card text-center border-l-2 border-red-500 mx-auto w-[350px] pl-1 shadow-lg shadow-slate-50">
+                        <img src="./images/speed.webp" alt="">
+                        <figcaption class="ctitle text-white w-full text-3xl font-bold py-6">Speed Optimization
+                        </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure
+                        class="card text-center border-l-2 border-red-500 mx-auto w-[350px] pl-1 shadow-lg shadow-slate-50">
+                        <img src="./images/websecurity.webp" alt="">
+                        <figcaption class="ctitle text-white w-full text-3xl font-bold py-6">Web Security</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure
+                        class="card text-center border-l-2 border-red-500 mx-auto w-[350px] pl-1 shadow-lg shadow-slate-50">
+                        <img src="./images/webscraping.webp" alt="">
+                        <figcaption class="ctitle text-white w-full text-3xl font-bold py-6">Web Scraping</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure
+                        class="card text-center border-l-2 border-red-500 mx-auto w-[350px] pl-1 shadow-lg shadow-slate-50">
+                        <img src="./images/blog.webp" alt="">
+                        <figcaption class="ctitle text-white w-full text-3xl font-bold py-6">Blog</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure
+                        class="card text-center border-l-2 border-red-500 mx-auto w-[350px] pl-1 shadow-lg shadow-slate-50">
+                        <img src="./images/ecommerce.webp" alt="">
+                        <figcaption class="ctitle text-white w-full text-3xl font-bold py-6">E-Commerce</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure
+                        class="card text-center border-l-2 border-red-500 mx-auto w-[350px] pl-1 shadow-lg shadow-slate-50">
+                        <img src="./images/inventory-management.webp" alt="">
+                        <figcaption class="ctitle text-white w-full text-3xl font-bold py-6">inventory management
+                        </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure
+                        class="card text-center border-l-2 border-red-500 mx-auto w-[350px] pl-1 shadow-lg shadow-slate-50">
+                        <img src="./images/school-management.webp" alt="">
+                        <figcaption class="ctitle text-white w-full text-3xl font-bold py-6">School management
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section id="whyus" class="py-10">
+            <h1
+                class="text-center text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400  to-red-600 py-10">
+                Why Us?
+            </h1>
+            <div class="grid grid-cols-1 gap-9 xl:grid-cols-[.4fr_1fr]">
+                <div>
+                    <div class=" w-80 mx-auto h-full flex justify-center items-center px-8 py-12 rounded-lg bg-cover bg-center shadow-lg shadow-yellow-300"
+                        style="background-image: url(./images/whyusside.webp);">
+                        <div class="text-center bg-white space-y-10 px-8 py-12 rounded-lg">
+
+                            <div
+                                class="text-black text-9xl font-bold w-40 h-40 flex justify-center items-center border-2 border-red-600 border-dashed mx-auto rounded-full ">
+                                8
+                            </div>
+
+                            <h2 class="text-2xl font-semibold text-gray-700">YEARS OF SMART EXPERIENCE</h2>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="grid grid-cols-1 gap-9 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 2xl:grid-cols-4">
+                    <div>
+                        <figure class="text-center w-56 mx-auto space-y-4">
+                            <div class="w-32 h-32 mx-auto rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/whyus/design.webp" width="100%" height="100%" alt="">
+                            </div>
+                            <figcaption class="text-2xl text-yellow-300 font-semibold">Stunning Design</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="text-center w-56 mx-auto space-y-4">
+                            <div class=" w-32 h-32 mx-auto rounded-full shadow-md shadow-yellow-300 bg-black">
+                                <img src="./images/icons/whyus/fast.webp" alt="fast-icon" loading="lazy" width="100%"
+                                    height="100%">
+                            </div>
+                            <figcaption class="text-2xl text-yellow-300 font-semibold">Ridiculously fast</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="text-center w-56 mx-auto space-y-4">
+                            <div class=" w-32 h-32 mx-auto rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/whyus/secure.webp" alt="secure-icon" loading="lazy"
+                                    width="100%" height="100%">
+                            </div>
+                            <figcaption class="text-2xl text-yellow-300 font-semibold">Reassuringly secure</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="text-center w-56 mx-auto space-y-4">
+                            <div class=" w-32 h-32 mx-auto rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/whyus/scalable.webp" alt="scalable-icon" loading="lazy"
+                                    width="100%" height="100%">
+                            </div>
+                            <figcaption class="text-2xl text-yellow-300 font-semibold">Exceedingly scalable</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="text-center w-56 mx-auto space-y-4">
+                            <div class=" w-32 h-32 mx-auto rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/whyus/versatile.webp" alt="versatile-icon" loading="lazy"
+                                    width="100%" height="100%">
+                            </div>
+                            <figcaption class="text-2xl text-yellow-300 font-semibold">Incredibly versatile</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="text-center w-56 mx-auto space-y-4">
+                            <div class=" w-32 h-32 mx-auto rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/whyus/clean-markup.webp" alt="clean-markup-icon" loading="lazy"
+                                    width="100%" height="100%">
+                            </div>
+                            <figcaption class="text-2xl text-yellow-300 font-semibold">Clean Markup</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="text-center w-56 mx-auto space-y-4">
+                            <div class=" w-32 h-32 mx-auto rounded-full  shadow-md shadow-yellow-300 bg-black">
+                                <img src="./images/icons/whyus/documented.webp" alt="well-documented-icon"
+                                    loading="lazy" width="100%" height="100%">
+                            </div>
+                            <figcaption class="text-2xl text-yellow-300 font-semibold">Well Documented</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="text-center w-56 mx-auto space-y-4">
+                            <div class=" w-32 h-32 mx-auto rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/whyus/animations.webp" alt="animations-icon" loading="lazy"
+                                    width="100%" height="100%">
+                            </div>
+                            <figcaption class="text-2xl text-yellow-300 font-semibold">Animations</figcaption>
+
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="text-center w-56 mx-auto space-y-4">
+                            <div class=" w-32 h-32 mx-auto rounded-full  shadow-md shadow-yellow-300 bg-black">
+                                <img src="./images/icons/whyus/validation.svg" alt="validation-icon" loading="lazy"
+                                    width="100%" height="100%">
+                            </div>
+                            <figcaption class="text-2xl text-yellow-300 font-semibold">W3C Validate</figcaption>
+
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="text-center w-56 mx-auto space-y-4">
+                            <div class=" w-32 h-32 mx-auto rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/whyus/design.webp" alt="design-icon" loading="lazy"
+                                    width="100%" height="100%">
+                            </div>
+                            <figcaption class="text-2xl text-yellow-300 font-semibold">Customizable</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="text-center w-56 mx-auto space-y-4">
+                            <div class=" w-32 h-32 mx-auto rounded-full  shadow-md shadow-yellow-300 bg-black">
+                                <img src="./images/icons/whyus/performance.webp" alt="performance-icon" loading="lazy"
+                                    width="100%" height="100%">
+                            </div>
+                            <figcaption class="text-2xl text-yellow-300 font-semibold">High Performance</figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="text-center w-56 mx-auto space-y-4">
+                            <div class=" w-32 h-32 mx-auto rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/whyus/support.webp" alt="support-icon" loading="lazy"
+                                    width="100%" height="100%">
+                            </div>
+                            <figcaption class="text-2xl text-yellow-300 font-semibold">Friendly Support</figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="min-h-screen bg-black flex justify-center items-center ">
+            <div class="max-w-3xl w-fit text-center space-y-24">
+
+                <h2 class="text-6xl text-white font-bold " style="line-height: 100px;">
+                    Set Up Your <br> Website Today With <br>
+                    <span class="text-red-500">Kashi Intelli</span>
+                </h2>
+
+                <a href="tel: +923000970989"
+                    class="glow text-lg inline-block font-bold relative py-4 px-12 cursor-pointer rounded-2xl">Contact
+                    Us
+                </a>
+
+
+            </div>
+        </section>
+        <section id="facts" class="py-20">
+            <div class="text-white rounded-3xl grid gap-10 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 w-11/12 mx-auto py-20 bg-cover bg-no-repeat bg-center  shadow-lg shadow-yellow-300"
+                style="background-image: url(./images/bg-funfact.webp);">
+                <div class="w-fit mx-auto">
+                    <div class="w-14 h-14 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve">
+                            <circle fill="#FFE352" cx="256" cy="256" r="246" />
+                            <circle fill="#FFB236" cx="256" cy="256" r="200" />
+                            <path fill="#FFE352"
+                                d="m256 85.777 50.061 101.434L418 203.477l-81 78.956 19.121 111.486L256 341.282l-100.122 52.637L175 282.433l-81-78.956 111.939-16.266z" />
+                        </svg>
+                    </div>
+                    <h1 class="text-5xl sm:text-6xl font-bold">24k+</h1>
+                    <h2 class="text-xl">Happy Clients</h2>
+                </div>
+                <div class="w-fit mx-auto">
+                    <div class="w-14 h-14 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve">
+                            <circle fill="#FFE352" cx="256" cy="256" r="246" />
+                            <circle fill="#FFB236" cx="256" cy="256" r="200" />
+                            <path fill="#FFE352"
+                                d="m256 85.777 50.061 101.434L418 203.477l-81 78.956 19.121 111.486L256 341.282l-100.122 52.637L175 282.433l-81-78.956 111.939-16.266z" />
+                        </svg>
+                    </div>
+                    <h1 class="text-5xl sm:text-6xl font-bold">36+</h1>
+                    <h2 class="text-xl">Expert Team</h2>
+                </div>
+                <div class="w-fit mx-auto">
+                    <div class="w-14 h-14 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve">
+                            <circle fill="#FFE352" cx="256" cy="256" r="246" />
+                            <circle fill="#FFB236" cx="256" cy="256" r="200" />
+                            <path fill="#FFE352"
+                                d="m256 85.777 50.061 101.434L418 203.477l-81 78.956 19.121 111.486L256 341.282l-100.122 52.637L175 282.433l-81-78.956 111.939-16.266z" />
+                        </svg>
+                    </div>
+                    <h1 class="text-5xl sm:text-6xl font-bold">15+</h1>
+                    <h2 class="text-xl">Awards Winner</h2>
+                </div>
+                <div class="w-fit mx-auto">
+                    <div class="w-14 h-14 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve">
+                            <circle fill="#FFE352" cx="256" cy="256" r="246" />
+                            <circle fill="#FFB236" cx="256" cy="256" r="200" />
+                            <path fill="#FFE352"
+                                d="m256 85.777 50.061 101.434L418 203.477l-81 78.956 19.121 111.486L256 341.282l-100.122 52.637L175 282.433l-81-78.956 111.939-16.266z" />
+                        </svg>
+                    </div>
+                    <h1 class="text-5xl sm:text-6xl font-bold">110+</h1>
+                    <h2 class="text-xl">Positive Reviews</h2>
+                </div>
+            </div>
+        </section>
+        <section id="pricing" class="py-10 space-y-10 ">
+            <h1
+                class="text-center text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400  to-red-600">
+                PRICING
+            </h1>
+            <h2 class="text-center text-white text-xl font-semibold">Pricing Plans for Web Development</h2>
+
+            <div
+                class="xl:w-[1200px] mx-auto grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-[1fr_.6fr_.6fr_.6fr_.6fr] xl:gap-0 rounded-3xl xl:shadow-lg xl:shadow-yellow-300">
+                <div class="hidden xl:block">
+                    <div class="bg-black space-y-10 rounded-l-3xl py-5 w-92 h-full mx-auto">
+                        <h2 class="text-center text-gray-500 text-4xl font-semibold">Features</h2>
+                        <div>
+                            <div class="text-gray-600 text-xl font-semibold px-3 py-1">Responsive Design</div>
+                            <div class="text-gray-600 text-xl font-semibold px-3 py-1 bg-gray-900">Staic Site</div>
+                            <div class="text-gray-600 text-xl font-semibold px-3 py-1">Dynamic Site</div>
+                            <div class="text-gray-600 text-xl font-semibold px-3 py-1 bg-gray-900">Data Storage</div>
+                            <div class="text-gray-600 text-xl font-semibold px-3 py-1">Authentication</div>
+                            <div class="text-gray-600 text-xl font-semibold px-3 py-1 bg-gray-900">SPA/CSR/SSR</div>
+                            <div class="text-gray-600 text-xl font-semibold px-3 py-1">Progressive Web App</div>
+                            <div class="text-gray-600 text-xl font-semibold px-3 py-1 bg-gray-900">Notifications</div>
+                            <div class="text-gray-600 text-xl font-semibold px-3 py-1">Installable App</div>
+                            <div class="text-gray-600 text-xl font-semibold px-3 py-1 bg-gray-900">Search Engine
+                                Optimization</div>
+                            <div class="text-gray-600 text-xl font-semibold px-3 py-1">Blog Website</div>
+                            <div class="text-gray-600 text-xl font-semibold px-3 py-1 bg-gray-900">E-Commerce Website
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        class="bg-black rounded-3xl xl:rounded-none space-y-10 py-5 w-80 sm:w-96 md:w-80 lg:w-96 xl:w-auto mx-auto shadow-lg shadow-yellow-300 xl:shadow-none">
+                        <h2 class="text-center text-white text-4xl font-semibold ">Basic</h2>
+                        <div>
+                            <h2 class="text-yellow-400 text-2xl font-semibold px-3 py-1 xl:hidden">Features</h2>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 ">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Responsive Design</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Staic Site</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Dynamic Site</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Data Storage</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Authentication</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">SPA/CSR/SSR</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Progressive Web App</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Notifications</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Installable App</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Search Engine Optimization
+                                </div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Blog Website</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">E-Commerce Website</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="text-center text-white text-6xl font-bold">$99</h1>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        class="bg-black rounded-3xl xl:rounded-none space-y-10 py-5 w-80 sm:w-96 md:w-80 lg:w-96 xl:w-auto mx-auto shadow-lg shadow-yellow-300 xl:shadow-none">
+                        <h2 class="text-center text-white text-4xl font-semibold ">Basic</h2>
+                        <div>
+                            <h2 class="text-yellow-400 text-2xl font-semibold px-3 py-1 xl:hidden">Features</h2>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 ">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Responsive Design</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Staic Site</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Dynamic Site</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Data Storage</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Authentication</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">SPA/CSR/SSR</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Progressive Web App</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Notifications</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Installable App</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Search Engine Optimization
+                                </div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Blog Website</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">E-Commerce Website</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="text-center text-white text-6xl font-bold">$199</h1>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        class="bg-black rounded-3xl xl:rounded-none space-y-10 py-5 w-80 sm:w-96 md:w-80 lg:w-96 xl:w-auto mx-auto shadow-lg shadow-yellow-300 xl:shadow-none">
+                        <h2 class="text-center text-white text-4xl font-semibold ">Basic</h2>
+                        <div>
+                            <h2 class="text-yellow-400 text-2xl font-semibold px-3 py-1 xl:hidden">Features</h2>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 ">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Responsive Design</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Staic Site</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Dynamic Site</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Data Storage</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Authentication</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">SPA/CSR/SSR</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Progressive Web App</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Notifications</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Installable App</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Search Engine Optimization
+                                </div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Blog Website</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">E-Commerce Website</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/cancel.webp" alt="Cancel Image" loading="lazy" width="100%"
+                                        height="100%">
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="text-center text-white text-6xl font-bold">$499</h1>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        class="bg-black rounded-3xl xl:rounded-none xl:rounded-r-3xl space-y-10 py-5 w-80 sm:w-96 md:w-80 lg:w-96 xl:w-auto mx-auto shadow-lg shadow-yellow-300 xl:shadow-none">
+                        <h2 class="text-center text-white text-4xl font-semibold ">Basic</h2>
+                        <div>
+                            <h2 class="text-yellow-400 text-2xl font-semibold px-3 py-1 xl:hidden">Features</h2>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 ">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Responsive Design</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Staic Site</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Dynamic Site</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Data Storage</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Authentication</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">SPA/CSR/SSR</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Progressive Web App</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Notifications</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Installable App</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Search Engine Optimization
+                                </div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">Blog Website</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center xl:justify-center px-3 py-1 bg-gray-900">
+                                <div class="text-gray-400 text-xl  font-semibold xl:hidden">E-Commerce Website</div>
+                                <div class="w-7 h-7 bg-gray-800 rounded-full">
+                                    <img src="./images/icons/success.webp" alt="Success Image" loading="lazy"
+                                        width="100%" height="100%">
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="text-center text-white text-6xl font-bold">$1099</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#0e1e28] pt-5">
+        <section class="p-2">
+            <div class="max-w-4xl sm:w-[600px] lg:w-full mx-auto rounded-3xl p-1 drop-shadow-[0_0_30px_rgba(255,255,255,0.25)]"
+                style="background: linear-gradient(90deg, #44ff9a -0.55%, #44b0ff 22.86%, #8b44ff 48.36%, #ff6644 73.33%, #ebff70 99.34%)">
+                <div
+                    class="flex flex-col sm:flex-row justify-around items-center py-10 px-4 bg-black text-white rounded-3xl">
+                    <h2 class="text-4xl sm:w-72 font-semibold mb-10 sm:mb-0">Grow your business with us</h2>
+                    <a href="tel: +923000970989"
+                        class="flex items-center justify-center rounded-lg text-white text-lg max-w-full min-w-[200px] p-1 drop-shadow-[0_15px_30px_rgba(151,65,252,0.2)]"
+                        style="background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);">
+                        <span class="text-center py-4 px-6 rounded-md w-full h-full inline-block"
+                            style="background-color: rgb(5, 6, 45);">Contact Us</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section
+            class="max-w-7xl text-[rgba(255,255,255,0.5)] sm:w-[600px] lg:w-full mx-auto p-8 grid grid-cols-2 gap-10 lg:grid-cols-[minmax(0,_1fr)_minmax(0,_.6fr)_minmax(0,_.6fr)_minmax(0,_1fr)]">
+            <div class="col-span-2 lg:col-span-1">
+                <div class="space-y-6">
+                    <h2 class="text-white text-2xl font-bold">Kashi Intelli</h2>
+
+                    <p class="">We`re a web application development company with strong expertise in e-commerce, retail,
+                        healthcare, and other industries. We Provide best SEO and Performance Services all over the
+                        world.</p>
+                    <ul class="flex items-center space-x-4">
+                        <li>
+                            <a href="https://www.facebook.com/kashiintelli" target="_blank"
+                                class="w-10 h-10 flex justify-center items-center bg-slate-700 rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/social/facebook.webp" alt="facebook logo" loading="lazy">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/kashiintelli/"
+                                class="w-10 h-10 flex justify-center items-center bg-slate-700 rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/social/instagram.webp" alt="instagram logo" loading="lazy">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="w-10 h-10 flex justify-center items-center bg-slate-700 rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/social/linkedin.webp" alt="linkedin logo" loading="lazy">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/KashiIntelli"
+                                class="w-10 h-10 flex justify-center items-center bg-slate-700 rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/social/twitter.webp" alt="twitter logo" loading="lazy">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=923000970989" target="_blank"
+                                class="w-10 h-10 flex justify-center items-center bg-slate-700 rounded-full  shadow-md shadow-yellow-300">
+                                <img src="./images/icons/social/whatsapp.webp" width="100%" height="100%"
+                                    alt="whatsapp logo" loading="lazy">
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="">
+                <div class="space-y-6">
+                    <h2 class="text-white text-2xl">Links</h2>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="/"
+                                class="relative text-lg pl-7 hover:text-white hover:before:bg-[#f36827] before:w-4 before:h-4 before:bg-[#20445a] before:absolute before:top-[50%] before:left-0 before:rounded-full before:translate-y-[-50%] before:flex before:justify-center before:items-center before:content-['🗸'] before:text-sm before:text-[#0e1e28] before:font-extrabold">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" role="button"
+                                class="relative text-lg  pl-7 hover:text-white hover:before:bg-[#f36827] before:w-4 before:h-4 before:bg-[#20445a] before:absolute before:top-[50%] before:left-0 before:rounded-full before:translate-y-[-50%] before:flex before:justify-center before:items-center before:content-['🗸'] before:text-sm before:text-[#0e1e28] before:font-extrabold">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services" role="button"
+                                class="relative text-lg pl-7 hover:text-white hover:before:bg-[#f36827] before:w-4 before:h-4 before:bg-[#20445a] before:absolute before:top-[50%] before:left-0 before:rounded-full before:translate-y-[-50%] before:flex before:justify-center before:items-center before:content-['🗸'] before:text-sm before:text-[#0e1e28] before:font-extrabold">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#whyus" role="button"
+                                class="relative text-lg  pl-7 hover:text-white hover:before:bg-[#f36827] before:w-4 before:h-4 before:bg-[#20445a] before:absolute before:top-[50%] before:left-0 before:rounded-full before:translate-y-[-50%] before:flex before:justify-center before:items-center before:content-['🗸'] before:text-sm before:text-[#0e1e28] before:font-extrabold">
+                                Why Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#facts" role="button"
+                                class="relative text-lg  pl-7 hover:text-white hover:before:bg-[#f36827] before:w-4 before:h-4 before:bg-[#20445a] before:absolute before:top-[50%] before:left-0 before:rounded-full before:translate-y-[-50%] before:flex before:justify-center before:items-center before:content-['🗸'] before:text-sm before:text-[#0e1e28] before:font-extrabold">
+                                Facts
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#pricing" role="button"
+                                class="relative text-lg  pl-7 hover:text-white hover:before:bg-[#f36827] before:w-4 before:h-4 before:bg-[#20445a] before:absolute before:top-[50%] before:left-0 before:rounded-full before:translate-y-[-50%] before:flex before:justify-center before:items-center before:content-['🗸'] before:text-sm before:text-[#0e1e28] before:font-extrabold">
+                                Pricing
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="">
+                <div class="space-y-6">
+                    <h2 class="text-white text-2xl">Company</h2>
+                    <ul class="space-y-2">
+                        <li>
+                            <a role="button"
+                                class="relative text-lg pl-7 hover:text-white hover:before:bg-[#f36827] before:w-4 before:h-4 before:bg-[#20445a] before:absolute before:top-[50%] before:left-0 before:rounded-full before:translate-y-[-50%] before:flex before:justify-center before:items-center before:content-['🗸'] before:text-sm before:text-[#0e1e28] before:font-extrabold">
+                                Web Design
+                            </a>
+                        </li>
+                        <li>
+                            <a role="button"
+                                class="relative text-lg  pl-7 hover:text-white hover:before:bg-[#f36827] before:w-4 before:h-4 before:bg-[#20445a] before:absolute before:top-[50%] before:left-0 before:rounded-full before:translate-y-[-50%] before:flex before:justify-center before:items-center before:content-['🗸'] before:text-sm before:text-[#0e1e28] before:font-extrabold">
+                                Web Dev.
+                            </a>
+                        </li>
+                        <li>
+                            <a role="button"
+                                class="relative text-lg pl-7 hover:text-white hover:before:bg-[#f36827] before:w-4 before:h-4 before:bg-[#20445a] before:absolute before:top-[50%] before:left-0 before:rounded-full before:translate-y-[-50%] before:flex before:justify-center before:items-center before:content-['🗸'] before:text-sm before:text-[#0e1e28] before:font-extrabold">
+                                App Dev.
+                            </a>
+                        </li>
+                        <li>
+                            <a role="button"
+                                class="relative text-lg  pl-7 hover:text-white hover:before:bg-[#f36827] before:w-4 before:h-4 before:bg-[#20445a] before:absolute before:top-[50%] before:left-0 before:rounded-full before:translate-y-[-50%] before:flex before:justify-center before:items-center before:content-['🗸'] before:text-sm before:text-[#0e1e28] before:font-extrabold">
+                                Soft. Dev.
+                            </a>
+                        </li>
+                        <li>
+                            <a role="button"
+                                class="relative text-lg  pl-7 hover:text-white hover:before:bg-[#f36827] before:w-4 before:h-4 before:bg-[#20445a] before:absolute before:top-[50%] before:left-0 before:rounded-full before:translate-y-[-50%] before:flex before:justify-center before:items-center before:content-['🗸'] before:text-sm before:text-[#0e1e28] before:font-extrabold">
+                                SEO
+                            </a>
+                        </li>
+                        <li>
+                            <a role="button"
+                                class="relative text-lg  pl-7 hover:text-white hover:before:bg-[#f36827] before:w-4 before:h-4 before:bg-[#20445a] before:absolute before:top-[50%] before:left-0 before:rounded-full before:translate-y-[-50%] before:flex before:justify-center before:items-center before:content-['🗸'] before:text-sm before:text-[#0e1e28] before:font-extrabold">
+                                Speed Opti.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-span-2 lg:col-span-1">
+                <div class="space-y-6">
+                    <h2 class="text-white text-2xl">Get In Touch</h2>
+                    <ul class="space-y-4">
+                        <li><a href="tel:+923000970989">(+92) 300 097 09 89 </a></li>
+                        <li><a href="mailto:kashiintelli@gmail.com">kashiintelli@gmail.com</a></li>
+                        <li><span>Working Hours</span></li>
+                        <li>Mon - Sat : 9am to 9pm</li>
+                        <li>Sunday is Closed</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <section class="bg-[#0a1820] p-6">
+            <h3 class="text-white text-center text-xl "><a href="/" class="font-bold text-red-600">Kashi Intelli</a> all
+                rights
+                reserved.</h3>
+        </section>
+    </footer>
+    <section>
+        <a href="https://api.whatsapp.com/send?phone=923000970989" target="_blank" class="w-20 h-20 fixed right-10 bottom-10 rounded-full shadow-lg shadow-yellow-300">
+            <img src="./images/icons/social/whatsapp.webp" width="100%" height="100%" alt="whatsapp logo"
+                loading="lazy">
+        </a>
+    </section>
+</body>
+
+</html>
